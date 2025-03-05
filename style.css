@@ -1,0 +1,309 @@
+/* testing region */
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    padding: 1rem;
+    font-size: 2.5rem
+}
+
+h3 {
+    font-size: 2rem
+}
+
+
+p {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+    padding: 1rem;
+    text-indent: 2rem;
+}
+
+#jump {
+    position: absolute;
+    left: -10000px;
+}
+
+body {
+    background-color: rgb(62, 61, 70);
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+}
+
+nav ul {
+    background-color: #3259a8;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    padding: .5rem 1rem;
+}
+
+nav a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    padding: 1rem;
+}
+
+#projects {
+    background-color: #1b367e;
+    padding: 1rem 0 0;
+}
+
+#contact {
+    background-color: #1b367e;
+}
+
+#projects h1,
+#contact h1 {
+    color: white;
+    padding-left: 1rem;
+}
+
+#about {
+    background-color: #8c9bc8;
+    display: flex;
+    flex-direction: row;
+}
+
+#aboutContent {
+    display: flex;
+    flex-direction: column;
+}
+
+#about img {
+    padding-top: 1rem;
+    max-height: 15rem;
+}
+
+footer {
+    background-color: #3259a8;
+}
+
+img {
+    width: 20%;
+}
+
+#banner {
+    width: 100%;
+    margin-top: 42px;
+    /*to account for Nav*/
+}
+
+.socials {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.socials img {
+    width: 100%;
+    display: flex;
+}
+
+
+main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    background-color: black;
+    /*change back to bright color to error-check*/
+}
+
+#project1,
+#project3 {
+    /* background-color: rgba(0, 0, 0, .3); */
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0))
+}
+
+#project2 {
+    /* background-color: rgba(0, 0, 0, .3); */
+    background-image: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0))
+}
+
+.projectMain {
+    color: white;
+    margin: 0 15px;
+}
+
+.projectTitle {
+    grid-area: projectTitle;
+    font-size: 2rem;
+}
+
+.projectImg {
+    grid-area: projectImg;
+    width: 100%;
+    min-width: 200px;
+}
+
+.projectDesc {
+    grid-area: projectDesc;
+    margin-bottom: 1rem;
+
+    overflow-y: auto;
+}
+
+.projectButton {
+    grid-area: projectButton;
+    width: 15rem;
+    height: 2rem;
+}
+
+.projectMain {
+    display: grid;
+    grid-template-areas: "projectTitle projectTitle"
+        "projectBank projectDesc";
+    justify-items: center;
+    gap: 1rem;
+    /*to account for the sections 1rem padding*/
+}
+
+.imgBankDesktop {
+    grid-area: projectBank;
+
+    display: grid;
+    grid-template-areas:
+        "mainImg"
+        "imgRow";
+    gap: 2px;
+}
+
+.bankMainImg {
+    grid-area: mainImg;
+}
+
+.bankImgRow {
+    grid-area: imgRow;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bankImgRow .demo {
+    max-width: 250px;
+}
+
+.imgBankDesktop img {
+    width: 100%;
+}
+
+.modal {
+    position: fixed;
+    padding: .2rem;
+    top: 50%;
+    left: 50%;
+    width: 85%;
+    transform: translate(-50%, -50%) scale(0);
+    /*set to zero initially to reder it hidden*/
+    transition: 200ms ease-in-out;
+    border: 5px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b4bddd;
+    color: black;
+}
+
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.imgBankModal {
+    display: none;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    pointer-events: none;
+    /*so that user can click through the overlay because it is still there, just at 0 opacity.*/
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.demo {
+    max-width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.projectButton {
+    display: none;
+}
+
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 800px) {
+    .mobile {
+        display: initial;
+    }
+
+    .projectMain {
+        align-items: center;
+        gap: 1rem;
+        /*to account for the sections 1rem padding*/
+        display: flex;
+        flex-direction: column;
+    }
+
+    .projMainImg {
+        grid-area: projectMainImg;
+    }
+
+    .imgBankDesktop .desktopMain {
+        display: none;
+    }
+
+    .imgBankDesktop {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .imgBankModal {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 2px;
+    }
+
+    .imgBankModal img {
+        width: 100%;
+    }
+
+
+    .projectButton {
+        display: initial;
+    }
+
+    .modalImgMain {
+        width: 100%;
+    }
+}

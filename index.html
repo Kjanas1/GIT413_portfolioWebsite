@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Kevin Janas">
+    <meta name="description" content="GIT 413 // Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <title>Kevin Janas Portfolio</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+
+    <link rel="stylesheet" href="plugins\lightbox2-master\dist\css\lightbox.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="plugins\lightbox2-master\dist\js\lightbox.js"></script>
+
+
+
+</head>
+
+<body>
+    <div id="jump">
+        <a href="">Jump to Navigation</a>
+        <a href="">Jump to Main</a>
+    </div>
+
+    <header>
+        <nav>
+            <!-- <button id="hamburgerBtn"><img src="graphics/svg/menu.svg" alt="hamburger"></button> -->
+            <ul id="navList">
+                <li class="logo"><a href="#banner">Main</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <img id="banner" class="banner" src="graphics\images\bannerMain.png">
+        <section id="projects">
+            <h1>Projects</h1>
+            <!-- <p>testing</p> -->
+            <section id="project1" class="projectMain">
+                <h2 class="projectTitle">Polus Quiz-building Website</h2>
+                <img class="projectImg mobile" src="graphics\images\project1Main.png">
+                <div class="projectDesc">
+                    <p>Polus launched a website that was able to provide
+                        students a study option that prizes customizability
+                        and simplicity in design. As Polus develops more
+                        quizzes, the modular design of the website’s quiz
+                        function makes implementing new quizzes simple.</p>
+                    <p>As the focus of the website was the quiz function, I first had to design the mechanism in which
+                        the quiz would function. Since it was to be designed entirely in JavaScript, I began researching
+                        strategies I could implement in the design.</p>
+                    <p>
+                        Alongside mapping out the functionality of the quizzes, I was tasked with designing the general
+                        branding of the website. After examining Polus’s missions and exploring the branding of similar
+                        sites on the market, I developed a visual design that satisfied the academic identity of Polus
+                        while maintaining a calm environment for the quiz-takers.</p>
+                    <p>
+                        It was important that the site could implement more quizzes at late dates, so I designed the
+                        quiz function to be able to load pre-made quizzes in a JSON format. This way, Polus could design
+                        new quizzes, and just direct the quiz function to that new document. Additionally, this opened
+                        up the ability to minimize the number of pages the website would have to host – including the
+                        need for a separate page for user generated quizzes.
+                    </p>
+                </div>
+
+                <div class="imgBankDesktop">
+                    <a class="demo desktopMain" href="graphics\images\project1Main.png" data-lightbox="gallery1">
+                        <img class="modalThumb" src="graphics\images\project1Main.png" alt="image-1">
+                    </a>
+                    <div class="bankImgRow">
+                        <a class="demo" href="graphics\images\project1_1.png" data-lightbox="gallery1">
+                            <img class="modalThumb" src="graphics\images\project1_1.png" alt="image-1">
+                        </a>
+                        <a class="demo" href="graphics\images\project1_2.png" data-lightbox="gallery1">
+                            <img class="modalThumb" src="graphics\images\project1_2.png" alt="image-2">
+                        </a>
+                        <a class="demo" href="graphics\images\project1_3.png" data-lightbox="gallery1">
+                            <img class="modalThumb" src="graphics\images\project1_3.png" alt="image-3">
+                        </a>
+                        <a class="demo" href="graphics\images\project1_4.png" data-lightbox="gallery1">
+                            <img class="modalThumb" src="graphics\images\project1_4.png" alt="image-4">
+                        </a>
+                        <a class="demo" href="graphics\images\project1_6.png" data-lightbox="gallery">
+                            <img class="modalThumb" src="graphics\images\project1_6.png" alt="image-6">
+                        </a>
+                    </div>
+                </div>
+                <!-- <button data-modal-target="#project1Modal" id="project1Btn" class="projectButton">Click for
+                    more!</button> -->
+
+                <div id="project1Modal" class="modal ">
+                    <h2>Polus Quiz-building Website</h2>
+                    <!-- <h3>Small tagline</h3> -->
+                    <p>Polus launched a website that was able to provide
+                        students a study option that prizes customizability
+                        and simplicity in design. As Polus develops more
+                        quizzes, the modular design of the website’s quiz
+                        function makes implementing new quizzes simple.</p>
+                    <div>
+                        <div class="imgBankModal">
+                            <a class="demo" href="graphics\images\project1_1.png" data-lightbox="gallery1m">
+                                <img class="modalThumb" src="graphics\images\project1_1.png" alt="image-1">
+                            </a>
+                            <a class="demo" href="graphics\images\project1_2.png" data-lightbox="gallery1m">
+                                <img class="modalThumb" src="graphics\images\project1_2.png" alt="image-2">
+                            </a>
+                            <a class="demo" href="graphics\images\project1_3.png" data-lightbox="gallery1m">
+                                <img class="modalThumb" src="graphics\images\project1_3.png" alt="image-3">
+                            </a>
+                            <a class="demo" href="graphics\images\project1_4.png" data-lightbox="gallery1m">
+                                <img class="modalThumb" src="graphics\images\project1_4.png" alt="image-4">
+                            </a>
+                            <a class="demo" href="graphics\images\project1_5.png" data-lightbox="gallery1m">
+                                <img class="modalThumb" src="graphics\images\project1Main.png" alt="image-5">
+                            </a>
+                            <a class="demo" href="graphics\images\project1_6.png" data-lightbox="gallery1m">
+                                <img class="modalThumb" src="graphics\images\project1_6.png" alt="image-6">
+                            </a>
+                        </div>
+                    </div>
+                    <button data-close-button="close-button">&times;</button>
+                </div>
+
+                </div>
+                <div id="overlay"></div>
+
+
+            </section>
+            <section id="project2" class="projectMain">
+                <h2 class="projectTitle">Games Done Quick convention collateral</h2>
+                <img class="projectImg mobile" src="graphics\images\project2Main.png">
+                <div class="projectDesc">
+                    <p>GDQ’s summer program was in need of branded
+                        conference collateral.
+                        Convention goers were supplied with convention
+                        materials that exhibited the spirit of the convention,
+                        clearly dictated the event’s information, and identified
+                        official functions.</p>
+                    <p>Beginning the project, I drafted out ideas for the layouts of the three different collaterals,
+                        with the greatest focus being placed on the conference’s program. I then collected all the
+                        assets I would need from official sources – the branding guide, the conference’s information and
+                        event schedule, photos of the speakers, and images from past conferences.</p>
+                    <p> Utilizing GDQ’s branding guide, I developed the program in Adobe InDesign. With the conference’s
+                        program design fully realized, I developed the remaining collateral – the conference badges and
+                        table tents – to be fully compliant with the program’s design, and ensure a consistent branding
+                        across each element.
+                    </p>
+                </div>
+
+
+                <div class="imgBankDesktop">
+                    <a class="demo bankMainImg desktopMain" href="graphics\images\project2Main.png"
+                        data-lightbox="gallery2">
+                        <img class="modalThumb" src="graphics\images\project2Main.png" alt="image-1">
+                    </a>
+                    <div class="bankImgRow">
+                        <a class="demo bankImg" href="graphics\images\project2_1.png" data-lightbox="gallery2">
+                            <img class="modalThumb" src="graphics\images\project2_1.png" alt="image-2">
+                        </a>
+                        <a class="demo bankImg" href="graphics\images\project2_2.png" data-lightbox="gallery2">
+                            <img class="modalThumb" src="graphics\images\project2_2.png" alt="image-3">
+                        </a>
+                        <a class="demo bankImg" href="graphics\images\project2_3.png" data-lightbox="gallery2">
+                            <img class="modalThumb" src="graphics\images\project2_3.png" alt="image-4">
+                        </a>
+                    </div>
+                </div>
+                <!-- <button data-modal-target="#project2Modal" id="project2Btn" class="projectButton">Click for
+                    more!</button> -->
+
+                <div id="project2Modal" class="modal ">
+                    <h2>Polus Quiz-building Website</h2>
+                    <!-- <h3>Small tagline</h3> -->
+                    <p>Polus launched a website that was able to provide
+                        students a study option that prizes customizability
+                        and simplicity in design. As Polus develops more
+                        quizzes, the modular design of the website’s quiz
+                        function makes implementing new quizzes simple.</p>
+                    <div>
+                        <div class="imgBankModal">
+                            <a class="demo" href="graphics\images\project2_1.png" data-lightbox="gallery2m">
+                                <img class="modalThumb" src="graphics\images\project2_1.png" alt="image-1">
+                            </a>
+                            <a class="demo" href="graphics\images\project2_2.png" data-lightbox="gallery2m">
+                                <img class="modalThumb" src="graphics\images\project2_2.png" alt="image-2">
+                            </a>
+                            <a class="demo" href="graphics\images\project2_3.png" data-lightbox="gallery2m">
+                                <img class="modalThumb" src="graphics\images\project2_3.png" alt="image-3">
+                            </a>
+                        </div>
+                    </div>
+                    <button data-close-button="close-button">&times;</button>
+                </div>
+
+            </section>
+            <section id="project3" class="projectMain">
+                <h2 class="projectTitle">Amazon Kindle App UI/UX redesign</h2>
+                <img class="projectImg mobile" src="graphics\images\project3Main.png">
+                <div class="projectDesc">
+                    <p class="projectDesc">Amazon’s Kindle app needed an update to streamline
+                        the user experience.
+                        With the new UI design, the kindle app became
+                        more accessible to the average user, and by utilizing
+                        a more tactile-inspired approach that invoked
+                        the imagery of flipping through books in a library,</p>
+                    <p>I began by analyzing the Kindle app and investigating where improvements would likely be made.
+                        After exploring similar apps with library functions for inspiration, I designed a series of
+                        static drafts to serve as the storyboard for my prototype.</p>
+                    <p>
+                        Based on my storyboard and in line with Amazon’s brand guidelines, I created assets in Adobe
+                        Illustrator that I would then import into Adobe After Effects, the program I would create the
+                        prototype in.</p>
+                    <p>
+                        Following my storyboard, I created the motion prototype in After Effects, making minor
+                        adjustments to the Illustrator assets as the project completed.
+                    </p>
+                </div>
+
+
+                <div class="imgBankDesktop">
+                    <a class="demo desktopMain" href="graphics\images\project3Main.png" data-lightbox="gallery3">
+                        <img class="modalThumb" src="graphics\images\project3Main.png" alt="image-1">
+                    </a>
+                    <div class="bankImgRow">
+                        <a class="demo" href="graphics\images\project3_1.png" data-lightbox="gallery3">
+                            <img class="modalThumb" src="graphics\images\project3_1.png" alt="image-1">
+                        </a>
+                        <a class="demo" href="graphics\images\project3_2.png" data-lightbox="gallery3">
+                            <img class="modalThumb" src="graphics\images\project3_2.png" alt="image-2">
+                        </a>
+                        <a class="demo" href="graphics\images\project3_3.png" data-lightbox="gallery3">
+                            <img class="modalThumb" src="graphics\images\project3_3.png" alt="image-3">
+                        </a>
+                        <a class="demo" href="graphics\images\project3_4.png" data-lightbox="gallery3">
+                            <img class="modalThumb" src="graphics\images\project3_4.png" alt="image-4">
+                        </a>
+                        <a class="demo" href="graphics\images\project3_5.png" data-lightbox="gallery3">
+                            <img class="modalThumb" src="graphics\images\project3_5.png" alt="image-5">
+                        </a>
+                    </div>
+                </div>
+                <!-- <button data-modal-target="#project3Modal" id="project3Btn" class="projectButton">Click for
+                    more!</button> -->
+
+                <div id="project3Modal" class="modal ">
+                    <h2>Polus Quiz-building Website</h2>
+                    <!-- <h3>Small tagline</h3> -->
+                    <p>Polus launched a website that was able to provide
+                        students a study option that prizes customizability
+                        and simplicity in design. As Polus develops more
+                        quizzes, the modular design of the website’s quiz
+                        function makes implementing new quizzes simple.</p>
+                    <div>
+                        <div class="imgBankModal">
+                            <a class="demo" href="graphics\images\project3_1.png" data-lightbox="gallery3m">
+                                <img class="modalThumb" src="graphics\images\project3_1.png" alt="image-1">
+                            </a>
+                            <a class="demo" href="graphics\images\project3_2.png" data-lightbox="gallery3m">
+                                <img class="modalThumb" src="graphics\images\project3_2.png" alt="image-2">
+                            </a>
+                            <a class="demo" href="graphics\images\project3_3.png" data-lightbox="gallery3m">
+                                <img class="modalThumb" src="graphics\images\project3_3.png" alt="image-3">
+                            </a>
+                            <a class="demo" href="graphics\images\project3_4.png" data-lightbox="gallery3m">
+                                <img class="modalThumb" src="graphics\images\project3_4.png" alt="image-4">
+                            </a>
+                            <a class="demo" href="graphics\images\project3_5.png" data-lightbox="gallery3m">
+                                <img class="modalThumb" src="graphics\images\project3_5.png" alt="image-5">
+                            </a>
+                        </div>
+                    </div>
+                    <button data-close-button="close-button">&times;</button>
+                </div>
+
+            </section>
+        </section>
+        <section id="about">
+            <div id="aboutContent">
+                <h1>About</h1>
+                <div>
+                    <p>Hello, my name is Kevin Janas. I am a full-stack web developer buoyed by over a decade of work as
+                        an
+                        illustrator. As a designer, I’m driven to create moments that empower and encourage the
+                        potential of
+                        others, whether that’s a piece that inspires an audience, or by creating opportunities for my
+                        peers
+                        through my leadership.</p>
+                    <p>
+                        Born and raised in the greater Chicago area, I like spending my free time opposing the forces of
+                        evil
+                        across virtual battlegrounds, eating pasta of all shapes and sizes, and snuggling with my floofy
+                        cat.
+                    </p>
+                </div>
+            </div>
+            <img src="graphics\images\logoBlack.png">
+        </section>
+        <section id="contact">
+            <h1>Contact</h1>
+            <div class="socials">
+                <a href="https://bsky.app/" id="bsky"><img src="graphics/svg/bluesky.svg"></a>
+                <a href="https://discord.com/" id="dsc"><img src="graphics/svg/discord.svg"></a>
+                <a href="https://www.facebook.com/" id="fb"><img src="graphics/svg/facebook.svg"></a>
+                <a href="https://www.instagram.com/" id="insta"><img src="graphics/svg/instagram.svg"></a>
+                <a href="https://x.com/" id="xSoc"><img src="graphics/svg/xSocial.svg"></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <small>&copy; Kevin Janas<br>For educational purposes only</small>
+    </footer>
+</body>
